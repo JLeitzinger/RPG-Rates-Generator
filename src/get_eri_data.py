@@ -18,7 +18,7 @@ def eri_login(url):
     usr = f.iloc[0][0].strip()
     pword = f.iloc[0][1].strip()
 
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('driver/chromedriver.exe')
     driver.get(url)
     email_box = f_xpath(driver, '//*[@id="UserName"]')
     email_box.send_keys(usr)
